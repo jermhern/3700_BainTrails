@@ -1,1 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
+header {
+  background-color: gray;
+}
+
+footer {
+  background-color: gray;
+  left: 0;
+  right: 0;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  padding: 15px;
+}
+
+.header_parent {
+  display: grid;
+  grid-template-areas: "logo search nav";
+  grid-template-columns: auto auto auto;
+}
+
+.nav {
+  align-content: center;
+  text-align: right;
+  padding: 5px;
+}
+
+.nav > a {
+  margin: 10px;
+}
+
+.search {
+  text-align: center;
+  align-content: center;
+}
+
+.logo {
+  padding: 30px;
+}
+
+.results_content {
+  display: grid;
+  grid-template-areas: "results map";
+  grid-template-columns: auto auto;
+  height: 85%;
+}
+
+.results {
+  align-content: center;
+  text-align: center;
+}
+
+.map {
+  background-color: cadetblue;
+  align-content: center;
+  text-align: center;
+}
+
+.home_content {
+  text-align: center;
+  align-content: center;
+  height: 85%;
+}
+
+.footer_parent {
+  display: grid;
+  grid-template-areas: "1 2";
+  grid-template-columns: auto 1fr;
+}
