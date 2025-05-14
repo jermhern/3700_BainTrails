@@ -49,8 +49,8 @@ footer p {
 .results_content {
   display: grid;
   grid-template-areas: "results map";
-  grid-template-columns: auto auto;
-  height: 85%;
+  grid-template-columns: 2fr 1fr;
+  height: 83%;
 }
 
 .results {
@@ -74,4 +74,21 @@ footer p {
   display: grid;
   grid-template-areas: "1 2";
   grid-template-columns: auto 1fr;
+}
+
+@media screen and (max-width:1000px) {
+  #map {
+    visibility: hidden;
+  }
+
+  .map {
+    visibility: hidden;
+  }
+
+  .results_content {
+    display: grid;
+    grid-template-areas: "results";
+    grid-template-columns: auto;
+    height: 85%;
+  }
 }

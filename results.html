@@ -1,6 +1,10 @@
 <htmt>
 
   <head>
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css' rel='stylesheet' />
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Results</title>
@@ -26,7 +30,17 @@
         <h2>Results</h2>
       </div>
       <div class="map">
-        <h2>Map</h2>
+        <div id='map' style='height: 100%;'></div>
+					<script>
+					mapboxgl.accessToken = 'pk.eyJ1IjoiamhlcjEwIiwiYSI6ImNtOXhjZHV0dTE2ZHMyam9oYm9vcDJ2ZDcifQ.blzKgRcRdMwQCkUYE3AeeQ';
+					const map = new mapboxgl.Map({
+						container: 'map', // container ID
+						style: 'mapbox://styles/mapbox/standard', // style URL
+						center: [-122.5383, 47.6454], // starting position [lng, lat]
+						// [-122.5383, 47.6454] Bainbridge island for baintrails
+						zoom: 11, // starting zoom
+					});
+					</script>
       </div>
     </div>
 
