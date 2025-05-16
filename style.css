@@ -54,14 +54,20 @@ footer p {
 }
 
 .results {
-  align-content: center;
-  text-align: center;
+  overflow-y: scroll;
+}
+
+.trail {
+  background-color: blue;
+  padding: 50px;
+  margin: 3px;
 }
 
 .map {
   background-color: cadetblue;
   align-content: center;
   text-align: center;
+  display: block;
 }
 
 .home_content {
