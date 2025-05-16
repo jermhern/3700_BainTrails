@@ -46,6 +46,7 @@ footer p {
   padding: 30px;
 }
 
+/* Trail Results ********************/
 .results_content {
   display: grid;
   grid-template-areas: "results map";
@@ -57,10 +58,47 @@ footer p {
   overflow-y: scroll;
 }
 
+.filters {
+  padding: 50px;
+}
+
 .trail {
-  background-color: blue;
+  display: grid;
+  grid-template-areas: "trail_img trail_info";
+  grid-template-columns: auto 1fr;
+  background-color: lightgray;
   padding: 50px;
   margin: 3px;
+}
+
+.trail_image {
+  display: block;
+}
+
+.trail_info {
+  display: block;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.name_favbutton {
+  display: grid;
+  grid-template-areas: "trail_img trail_info";
+  grid-template-columns: 1fr auto;
+}
+
+.trail_name {
+  display: block;
+}
+
+.favbutton {
+  display: block;
+}
+
+.info_reviews {
+  display: grid;
+  grid-template-areas: "features reviews";
+  grid-template-columns: 1fr auto;
 }
 
 .map {
@@ -82,6 +120,7 @@ footer p {
   grid-template-columns: auto 1fr;
 }
 
+/* CSS Queries ***************************/
 @media screen and (max-width:1000px) {
   #map {
     visibility: hidden;
