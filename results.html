@@ -135,6 +135,24 @@
 						// [-122.5383, 47.6454] Bainbridge island for baintrails
 						zoom: 11, // starting zoom
 					});
+
+          // Display the data points of 'caretakers'
+					map.on('load', () => {
+					    map.addSource('Bainbridge-Parks', {
+					      type: 'vector',
+					      url: 'mapbox://jher10.cm9xch21p12ln1opbkv1cz00x-8ckm1' // my tileset ID
+					    });
+					    map.addLayer({
+					      'id': 'Bainbridge-Parks',
+					      'type': 'circle', 
+					      'source': 'Bainbridge-Parks',
+					      'source-layer': 'Bainbridge-Parks',
+					      'paint': {
+					        'circle-color': '#043302',
+					        'circle-width': 2
+					      }
+					    });
+					});
 					</script>
       </div>
     </div>
