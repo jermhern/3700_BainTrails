@@ -15,7 +15,7 @@
       <div class="header_parent">
         <a class="logo" href="./index.html"><h2>BainTrails [Logo]</h2></a>
         <form action="trail_results.php">
-          <input method="POST" type="text" id="nav_search" name="search" placeholder="search">
+          <input type="text" id="nav_search" name="search" placeholder="search">
         </form>
         <!-- Links on right side of header -->
         <ul class="nav">
@@ -32,90 +32,19 @@
           <h2>Filters</h2>
         </div>
 
+        <!-- Insert some sort of for loop to populate the data from the DB here  -->
+        <?php
+          echo '<h2>Searched for: ' . $_POST['search'] . '</h2>';
+        ?>
+
         <div class="trail">
           <img class="trail_img" src="assets/trail_placeholder.png" alt="trail icon">
 
           <div class="trail_info">
-
             <div class="name_favbutton">
               <h2 class="trail_name">1. Trail Name</h2>
               <button class="fav_button">Heart Logo</button>
             </div>
-            
-            
-            <p>Distance</p>
-            <div class="info_reviews">
-              <p class="features">Features</p>
-              <p class="reviews">Reviews</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Addtl. trails go here -->
-         <div class="trail">
-          <img class="trail_img" src="assets/trail_placeholder.png" alt="trail icon">
-
-          <div class="trail_info">
-
-            <div class="name_favbutton">
-              <h2 class="trail_name">1. Trail Name</h2>
-              <button class="fav_button">Heart Logo</button>
-            </div>
-            
-            
-            <p>Distance</p>
-            <div class="info_reviews">
-              <p class="features">Features</p>
-              <p class="reviews">Reviews</p>
-            </div>
-          </div>
-        </div>
-        <div class="trail">
-          <img class="trail_img" src="assets/trail_placeholder.png" alt="trail icon">
-
-          <div class="trail_info">
-
-            <div class="name_favbutton">
-              <h2 class="trail_name">1. Trail Name</h2>
-              <button class="fav_button">Heart Logo</button>
-            </div>
-            
-            
-            <p>Distance</p>
-            <div class="info_reviews">
-              <p class="features">Features</p>
-              <p class="reviews">Reviews</p>
-            </div>
-          </div>
-        </div>
-        <div class="trail">
-          <img class="trail_img" src="assets/trail_placeholder.png" alt="trail icon">
-
-          <div class="trail_info">
-
-            <div class="name_favbutton">
-              <h2 class="trail_name">1. Trail Name</h2>
-              <button class="fav_button">Heart Logo</button>
-            </div>
-            
-            
-            <p>Distance</p>
-            <div class="info_reviews">
-              <p class="features">Features</p>
-              <p class="reviews">Reviews</p>
-            </div>
-          </div>
-        </div>
-        <div class="trail">
-          <img class="trail_img" src="assets/trail_placeholder.png" alt="trail icon">
-
-          <div class="trail_info">
-
-            <div class="name_favbutton">
-              <h2 class="trail_name">1. Trail Name</h2>
-              <button class="fav_button">Heart Logo</button>
-            </div>
-            
             
             <p>Distance</p>
             <div class="info_reviews">
@@ -168,5 +97,6 @@
     </footer>
 
     <script src="script.js"></script>
+
   </body>
 </html>

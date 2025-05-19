@@ -120,6 +120,14 @@ footer p {
   grid-template-columns: auto 1fr;
 }
 
+/* Home *****************************/
+
+.home_header_parent {
+  display: grid;
+  grid-template-areas: "logo nav";
+  grid-template-columns: auto auto;
+}
+
 /* CSS Queries ***************************/
 @media screen and (max-width:1000px) {
   #map {
