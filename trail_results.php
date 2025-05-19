@@ -15,7 +15,7 @@
       <div class="header_parent">
         <a class="logo" href="./index.html"><h2>BainTrails [Logo]</h2></a>
         <form action="trail_results.php">
-          <input type="text" id="nav_search" name="search" placeholder="search">
+          <input method="POST" type="text" id="nav_search" name="search" placeholder="search">
         </form>
         <!-- Links on right side of header -->
         <ul class="nav">
@@ -42,14 +42,14 @@
 
           <div class="trail_info">
             <div class="name_favbutton">
-              <h2 class="trail_name">1. Trail Name</h2>
+              <h2 class="trail_name">1. $TrailName</h2>
               <button class="fav_button">Heart Logo</button>
             </div>
             
             <p>Distance</p>
             <div class="info_reviews">
-              <p class="features">Features</p>
-              <p class="reviews">Reviews</p>
+              <p class="features">$Features</p>
+              <p class="reviews">$Reviews</p>
             </div>
           </div>
         </div>
