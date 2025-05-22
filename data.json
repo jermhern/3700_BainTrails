@@ -1,0 +1,155 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bloedel Reserve Loop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.5498121, 47.7065644]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hidden Cove Trail #4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.6666406, 47.6444702]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Manzanita Park Loop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56114, 47.68069]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ted Olson Loop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.51826, 47.67081]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Battle Point Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.57703, 47.66397]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Forest to Sky Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.55909, 47.65938]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forest Park Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.5597, 47.65665]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forest Figure Eight"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56048, 47.65694]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forest West Main Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56032, 47.65667]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Main Loop Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.54784, 47.65066]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gazzam Lake Park Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56588, 47.62491]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gazzam Lake and Veterane Open Space Preserves"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56378, 47.60978]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Peters Trail and Opal Ridge Loop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.56381, 47.60992]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Japanese American Exclusion Memorial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.50043, 47.61545]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Ward Upper Loop"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.53137, 47.58843]
+      }
+    }
+  ]
+}

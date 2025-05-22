@@ -16,7 +16,7 @@
         <a class="logo" href="./index.html">
           <img src="assets/baintrail_logo.png" alt="BainTrails Logo">
         </a>
-        <form action="trail_results.php">
+        <form action="./Database/trail_results.php">
           <input method="POST" type="text" id="nav_search" name="search" placeholder="search">
         </form>
         <!-- Links on right side of header -->
@@ -137,7 +137,7 @@
 						style: 'mapbox://styles/jher10/cmasqzz9a01gq01sie7d6bs8s', // style URL
 						center: [-122.5383, 47.6454], // starting position [lng, lat]
 						// [-122.5383, 47.6454] Bainbridge island for baintrails
-						zoom: 11, // starting zoom
+						zoom: 12, // starting zoom
 					});
 
           // Display the data points of 'caretakers'
@@ -146,6 +146,8 @@
 					      type: 'vector',
 					      url: 'mapbox://jher10.cm9xch21p12ln1opbkv1cz00x-8ckm1' // my tileset ID
 					    });
+              
+              // Show the data placed into map from mapbox
 					    map.addLayer({
 					      'id': 'Bainbridge-Parks',
 					      'type': 'circle', 
