@@ -116,6 +116,7 @@ input[type="text"]:focus {
   height: 550px;
   width: 140%;
   background-color: var(--light-gray);
+  overflow: hidden;
   border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
