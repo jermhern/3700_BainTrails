@@ -32,6 +32,17 @@
       <div class="results">
         <div class="filters">
           <h2>Filters</h2>
+          <form method="POST" action="./database/trail_results.php">
+            <input type="checkbox" id="kid" name="kid_filter" value="kids">
+            <label for="kid_filter">Good for kids</label><br>
+            <input type="checkbox" id="dog" name="dog_filter" value="dogs">
+            <label for="dog_filter">Good for dogs</label><br>
+            <input type="checkbox" id="easy" name="easy_filter" value="easy">
+            <label for="easy_filter">Easy</label><br>
+            <input type="checkbox" id="moderate" name="moderate_filter" value="moderate">
+            <label for="moderate_filter">Moderate</label><br>
+            <input type="submit" value="Apply">
+          </form>
         </div>
 
         <div class="trail">

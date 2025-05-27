@@ -1,4 +1,4 @@
-<htmt>
+<html>
   <head>
     <!-- Map -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js'></script>
@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="../style.css">
     <script src="script.js"></script>
     <title>Results</title>
+
+    <?php
+      // // establish connection with DB 
+      // $servername = 'cssql.seattleu.edu';
+      // $user = 'll_jhernandez10';
+      // $pass = '2345678';
+      // $dbname = '345678';
+
+      // // create the connection
+      // $conn = mysqli_connect($servername, $user, $pass, $dbname);
+
+      // if (!$conn) {
+      //   die('<h2>DB Connection Error: ' . mysqli_connect_error() . '</h2><br>
+      //        <button onclick="history.back();">Go back!</button>');
+      // } 
+    ?>
   </head>
 
   <body>
@@ -32,11 +48,22 @@
       <div class="results">
         <div class="filters">
           <h2>Filters</h2>
+          <form method="POST" action="./database/trail_results.php">
+            <input type="checkbox" id="kid" name="kid_filter" value="kids">
+            <label for="kid_filter">Good for kids</label><br>
+            <input type="checkbox" id="dog" name="dog_filter" value="dogs">
+            <label for="dog_filter">Good for dogs</label><br>
+            <input type="checkbox" id="easy" name="easy_filter" value="easy">
+            <label for="easy_filter">Easy</label><br>
+            <input type="checkbox" id="moderate" name="moderate_filter" value="moderate">
+            <label for="moderate_filter">Moderate</label><br>
+            <input type="submit" value="Apply">
+          </form>
         </div>
 
         <!-- Insert some sort of for loop to populate the data from the DB here  -->
         <?php
-          echo '<h1>Searched for: ' . $_POST["search"] . '</h1>';
+          echo '<h1>Results for: ' . $_POST["search"] . '</h1>';
         ?>
 
         <div class="trail">
@@ -99,6 +126,10 @@
     </footer>
 
     <script src="script.js"></script>
-
+    <?php 
+      // disconnect
+      mysqli_free_result($result);
+      mysqli_close($conn);
+    ?>
   </body>
 </html>
