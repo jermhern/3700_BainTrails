@@ -38,7 +38,7 @@
         <!-- Links on right side of header -->
         <ul class="nav">
           <a href="../results.html">Trails</a>
-          <a href="lost_page.html">Account</a>
+          <a href="../lost_page.html">Account</a>
         </ul>
       </div>
     </header>
@@ -48,7 +48,7 @@
       <div class="results">
         <div class="filters">
           <h2>Filters</h2>
-          <form method="POST" action="./database/trail_results.php">
+          <form method="POST" action="trail_results.php">
             <input type="checkbox" id="kid" name="kid_filter" value="kids">
             <label for="kid_filter">Good for kids</label><br>
             <input type="checkbox" id="dog" name="dog_filter" value="dogs">
@@ -120,8 +120,8 @@
     <!-- the bottom of the page -->
     <footer>
       <div class="footer_parent">
-        <p id="1"><a href="lost_page.html">About</a></p>
-        <p id="2"><a href="lost_page.html">Contact</a></p>
+        <p id="1"><a href="../lost_page.html">About</a></p>
+        <p id="2"><a href="../lost_page.html">Contact</a></p>
       </div>
     </footer>
 
