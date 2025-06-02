@@ -1,9 +1,11 @@
-<htmt>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <!-- Map -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.11.0/mapbox-gl.css' rel='stylesheet' />
 
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Results</title>
@@ -34,13 +36,13 @@
           <h2>Filters</h2>
           <form method="POST" action="./database/trail_results.php">
             <input type="checkbox" id="kid" name="kid_filter" value="kids">
-            <label for="kid_filter">Good for kids</label><br>
+            <label for="kid">Good for kids</label><br>
             <input type="checkbox" id="dog" name="dog_filter" value="dogs">
-            <label for="dog_filter">Good for dogs</label><br>
+            <label for="dog">Good for dogs</label><br>
             <input type="checkbox" id="easy" name="easy_filter" value="easy">
-            <label for="easy_filter">Easy</label><br>
+            <label for="easy">Easy</label><br>
             <input type="checkbox" id="moderate" name="moderate_filter" value="moderate">
-            <label for="moderate_filter">Moderate</label><br>
+            <label for="moderate">Moderate</label><br>
             <input type="submit" value="Apply">
           </form>
         </div>
