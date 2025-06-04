@@ -9,20 +9,62 @@
     <title>Results</title>
 
     <?php
-      // // establish connection with DB 
-      // $servername = 'cssql.seattleu.edu';
-      // $user = 'll_jhernandez10';
-      // $pass = '2345678';
-      // $dbname = '345678';
+      $servername = 'cssql.seattleu.edu';
+      $user = 'll_jhernandez10';
+      $pass = '04Jp6E7/D8qfiUzD';
+      $dbname = 'll_jhernandez10';
 
-      // // create the connection
-      // $conn = mysqli_connect($servername, $user, $pass, $dbname);
+      // create the connection
+      $conn = mysqli_connect($servername, $user, $pass, $dbname);
 
-      // if (!$conn) {
-      //   die('<h2>DB Connection Error: ' . mysqli_connect_error() . '</h2><br>
-      //        <button onclick="history.back();">Go back!</button>');
-      // } 
-    ?>
+      if (!$conn) {
+        die('<h2 style="color: green;">connection failed: ' . mysqli_connect_error() . '</h2>');
+      } 
+
+      echo '<h2 style="color: green;">connected successfully</h2>';
+
+      // get the query - explode to determine if it is insert, update, etc.
+      $trail = explode(" ", $_POST["search"]);
+      $sql = 'select * from TRAIL natural join Photos where Trail_name like"'. $trail '\";'
+
+      // pass the query to sql 
+      $result = mysqli_query($conn, $sql);
+
+      if ($result) {
+        // if the query is to select data, use this
+        if (mysqli_num_rows($result) > 0) {
+          echo '<table border=\'1\'>';
+
+          $fields = mysqli_fetch_fields($result);
+
+          echo '<tr>';
+          foreach ($fields as $field) {
+            echo '<th>' . $field->name . '</th>';
+          }
+          echo '</tr>';
+
+          while($row = mysqli_fetch_row($result)) {
+            echo '<tr>';
+            for ($i = 0; $i < mysqli_num_fields($result); $i++) {
+              echo '<td>' . $row[$i] . '</td>';
+            }
+            echo '</tr>';
+          }
+          echo '</table>';
+        } else {
+          echo '0 results';
+        }
+      } else {
+        echo 'Error processing query: ' . $sql . '<br>';
+      }
+
+      echo '<button><a href=\'http://css1.seattleu.edu/~jhernandez10/3300/\'>home</a></button>';
+      echo '<button onclick=\'history.back();\'>go back</button>';
+
+      // disconnect
+      mysqli_free_result($result);
+      mysqli_close($conn);
+      ?>
   </head>
 
   <body>
