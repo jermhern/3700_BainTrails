@@ -114,6 +114,10 @@
                             if ($row["Trail_Parking_Fee"] == 1) {
                               echo '<li>Fee required</li>';
                             } 
+
+                            if ($row["Trail_Parking_Fee"] == 1) {
+                              echo '<li>Fee required</li>';
+                            } 
                           echo '</ul>';
                           echo '<p class="reviews">' . $row["Trail_Reviews"] . '</p>
                         </div>

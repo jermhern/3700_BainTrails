@@ -51,6 +51,8 @@
             <label for="easy_filter">Easy</label><br>
             <input type="checkbox" id="moderate" name="moderate_filter" value="moderate">
             <label for="moderate_filter">Moderate</label><br>
+            <input type="checkbox" id="fee" name="fee_filter" value="fee">
+            <label for="fee_filter">Fee not required</label><br>
             <input type="submit" value="Apply">
           </form>
         </div>
@@ -68,10 +70,11 @@
             $dog_filter = $_POST['dog_filter'];
             $easy_filter = $_POST['easy_filter'];
             $moderate_filter = $_POST['moderate_filter'];
+            $fee_filter = $_POST['fee_filter'];
             
             if ($kid_filter == "kids") {          
               // append to sql query
-              $sql .= ' and Trail_Family = 1;';
+              $sql .= ' and Trail_Family = 1 ';
             }
 
             if ($dog_filter == "dogs") {          
@@ -87,6 +90,10 @@
             if ($moderate_filter == "moderate") {          
               // append to sql query
               $sql .= ' and Trail_Difficulty = "moderate" ';
+            }
+
+            if ($fee_filter == "fee") {
+              $sql .= ' and Trail_Parking_Fee = 0 ';
             }
 
             // // pass the query to sql 
@@ -145,7 +152,7 @@
                     </div>';
                 }
                } else {
-                  echo '0 results for ' . $_POST["search"];
+                  echo '0 results for ' . $_POST["search"] . $kid_filter . ' ' . $dog_filter . ' ' . $easy_filter . ' ' . $fee_filter . ' ' . $moderate_filter . ' trails.';
                }
              } else {
                 echo 'Error processing query: ' . $sql . '<br>';
