@@ -62,7 +62,32 @@
             } 
 
             // get the query
-            $sql = 'select * from TRAIL natural join Photos where Trail_name like "%'. $_POST["search"] .'%"';
+            $sql = 'select * from TRAIL natural join Photos where Trail_name like "%'. $_POST["search"] .'%" ';
+
+            $kid_filter = $_POST['kid_filter'];
+            $dog_filter = $_POST['dog_filter'];
+            $easy_filter = $_POST['easy_filter'];
+            $moderate_filter = $_POST['moderate_filter'];
+            
+            if ($kid_filter == "kids") {          
+              // append to sql query
+              $sql .= ' and Trail_Family = 1;';
+            }
+
+            if ($dog_filter == "dogs") {          
+              // append to sql query
+              $sql .= ' and Trail_Dog = 1 ';
+            }
+
+            if ($easy_filter == "easy") {          
+              // append to sql query
+              $sql .= ' and Trail_Difficulty = "easy" ';
+            }
+
+            if ($moderate_filter == "moderate") {          
+              // append to sql query
+              $sql .= ' and Trail_Difficulty = "moderate" ';
+            }
 
             // // pass the query to sql 
             $result = mysqli_query($conn, $sql);
