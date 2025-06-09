@@ -171,8 +171,8 @@
     <!-- the bottom of the page -->
     <footer>
       <div class="footer_parent">
-        <p id="1"><a href="lost_page.html">About</a></p>
-        <p id="2"><a href="lost_page.html">Contact</a></p>
+        <p id="1"><a href="about.html">About</a></p>
+        <p id="2"><a href="contact.html">Contact</a></p>
       </div>
 
       <?php 
